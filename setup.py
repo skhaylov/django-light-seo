@@ -11,15 +11,15 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-light-seo',
-    version='0.2',
+    version='0.3',
     packages=find_packages(),
     include_package_data=True,
     license='BSD License',  # example license
     description='A simple Django app for SEO.',
-    long_description=unicode(README),
+    long_description=README,
     url='https://www.github.com/skhaylov/django-simple-seo',
-    author='Your Name',
-    author_email='yourname@example.com',
+    author='Sergey Khaylov',
+    author_email='Sergey.Haylov@gmail.com',
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
