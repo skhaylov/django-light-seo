@@ -16,7 +16,7 @@ setup(
     include_package_data=True,
     license='BSD License',  # example license
     description='A simple Django app for SEO.',
-    long_description=README,
+    long_description=unicode(README),
     url='https://www.github.com/skhaylov/django-simple-seo',
     author='Your Name',
     author_email='yourname@example.com',
