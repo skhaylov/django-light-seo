@@ -24,7 +24,7 @@ def seo_title(context, **kwargs):
 @register.simple_tag(takes_context=True)
 def seo_description(context, **kwargs):
     kwargs = kwargs or {}
-    description = context.get('SEO_DESCRIPTION', '')
+    description = context.get('SEO_DESCRIPTION', '') or ''
     description = u' '.join(description.split('\n'))
     return mark_safe(
         u'<meta name="description" content="{}">'.format(description)
@@ -34,7 +34,7 @@ def seo_description(context, **kwargs):
 @register.simple_tag(takes_context=True)
 def seo_keywords(context, **kwargs):
     kwargs = kwargs or {}
-    keywords = context.get('SEO_KEYWORDS', '')
+    keywords = context.get('SEO_KEYWORDS', '') or ''
     keywords = ','.join([k.strip() for k in keywords.split(',') if k.strip()])
     keywords = keywords.replace('\n', ' ')
     return mark_safe(u'<meta name="keywords" content="{}">'.format(keywords))
